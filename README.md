@@ -20,6 +20,25 @@ StressDeez deliberately loads your NVIDIA GPU and CPU to generate heat and exerc
 
 For example, selecting **300 W** asks the controller to approach 300 W of measured GPU board plus CPU package power. The amount each component contributes depends on the hardware and available sensors. This reading excludes the rest of the PC and PSU losses; it is not wall-outlet power. It can help observe cooling and sustained-load behavior, but it does not produce a benchmark score or certify that a machine is stable. The FFT workload is implemented in this app; it does not launch Prime95.
 
+## Interface preview
+
+![StressDeez V10 interface showing a 300 W target and example GPU/CPU readings](docs/operation-preview.svg)
+
+*Generated from the V10 drawing code. The readings illustrate operation; this is not a capture of a live hardware test.*
+
+## What makes StressDeez different
+
+- **A deliberately cheeky theme:** a custom-shaped, borderless window with two round power gauges beneath a tall rounded control panel, pastel peach and purple colors, the StressDeez name, and a tongue-in-cheek caption. Clicking the rounded top closes it. V10 keeps the illustration static, without wobble, particles, or bouncing readouts.
+- **One wattage slider:** the same control starts, adjusts, and stops the compute workload. There are no separate CPU/GPU start buttons.
+- **GPU-first allocation:** the NVIDIA GPU does the work first; CPU FFT workers contribute when more power is needed and combined measurements are available. The boundary follows the GPU's learned capacity rather than being fixed at halfway up the slider.
+- **A moving CPU marker with a lock:** snapping to the blue line pins full GPU load and keeps the application's CPU FFT workload off, even as that line moves.
+- **Measured-power feedback:** small, spaced adjustments, filtering, a deadband, and reversal damping help reduce constant hunting around the selected wattage. It respects the minimum continuously active GPU load by staying idle below that floor.
+- **Visible sensor limitations:** unavailable readings show N/A. F1 explains CPU sensor access, and missing CPU power data prevents accurate combined-power regulation.
+
+## Running
+
+**Run StressDeez as administrator.** After building, right-click **dist/StressDeez.exe** and choose **Run as administrator**. Administrator access is needed for the CPU hardware sensor driver; without usable CPU package-power readings, the app cannot accurately regulate combined CPU/GPU power. Some systems may still block the sensor driver, so check F1 diagnostics if readings remain N/A.
+
 ## Build
 
 Double-click **BUILD.bat**. It reuses an existing .NET 8+ SDK or downloads .NET 8 to a shared user folder. Once built, copy **dist/StressDeez.exe** anywhere on the same PC; it needs no .NET runtime installation. Your NVIDIA graphics driver must provide OpenCL and NVML. The build uses NuGet for `LibreHardwareMonitorLib` on first restore. The compiler output is saved to `build.log`.
