@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="740" height="980" viewBox="0 0 740 980"><rect width="740" height="980" fill="#faf5ea"/><g font-family="Segoe UI,Arial,sans-serif" text-anchor="middle" fill="#382a3c">
+<ellipse cx="190" cy="779.5" rx="170" ry="134.5" fill="#fca579" stroke="#433145" stroke-width="4"/>
+<text x="190" y="768" font-size="17" font-weight="700">GPU • BOARD POWER</text>
+<ellipse cx="190" cy="829.5" rx="63" ry="45.5" fill="#ffda7d" stroke="black" stroke-width="4"/>
+<text x="190" y="837" font-size="30" font-weight="700">265 W</text>
+<text x="190" y="891" font-size="11" font-weight="400">67°C  99%</text>
+<ellipse cx="550" cy="779.5" rx="170" ry="134.5" fill="#bba9f5" stroke="#433145" stroke-width="4"/>
+<text x="550" y="768" font-size="17" font-weight="700">CPU • PACKAGE POWER</text>
+<ellipse cx="550" cy="829.5" rx="63" ry="45.5" fill="#e8d2ff" stroke="black" stroke-width="4"/>
+<text x="550" y="837" font-size="30" font-weight="700">35 W</text>
+<text x="550" y="891" font-size="11" font-weight="400">58°C  24%</text>
+<rect x="180" y="40" width="380" height="701" rx="174" fill="#fbdbbe" stroke="#433145" stroke-width="5"/>
+<text x="370" y="216" font-size="33" font-weight="700">STRESSDEEZ</text>
+<text x="370" y="248" font-size="13" font-weight="700">you cant get a photograph pregnant</text>
+<text x="370" y="304" font-size="30" font-weight="700">300.0 W</text>
+<text x="370" y="325" font-size="11" font-weight="400">MEASURED GPU BOARD + CPU PACKAGE</text>
+<text x="353" y="364" font-size="13" font-weight="700">TARGET 300 W</text>
+<rect x="218" y="393" width="150" height="75" fill="white" stroke="black" stroke-width="3"/>
+<text x="293" y="413" font-size="11" font-weight="400">GPU TEMP</text>
+<text x="293" y="451" font-size="30" font-weight="700">67°C</text>
+<rect x="218" y="480" width="150" height="75" fill="white" stroke="black" stroke-width="3"/>
+<text x="293" y="500" font-size="11" font-weight="400">CPU TEMP</text>
+<text x="293" y="538" font-size="30" font-weight="700">58°C</text>
+<text x="327" y="585" font-size="11" font-weight="400">CPU POWER 35 W</text>
+<text x="327" y="613" font-size="11" font-weight="400">GPU LIMIT 285 W</text>
+<text x="327" y="645" font-size="11" font-weight="400">CPU LINE: MEASURED</text>
+<text x="372" y="708" font-size="11" font-weight="400">GPU + CPU / HOLDING TARGET</text>
+<rect x="497" y="355" width="18" height="272" fill="white" stroke="black" stroke-width="3"/><rect x="500" y="445.2857142857143" width="12" height="173.71428571428572" fill="#fca579"/><rect x="500" y="436.1428571428571" width="12" height="9.142857142857167" fill="#bba9f5"/><path d="M484 445.2857142857143 H530" stroke="blue" stroke-width="3"/><circle cx="506" cy="436.1428571428571" r="17" fill="#bba9f5" stroke="black" stroke-width="3"/>
+<text x="542" y="450.2857142857143" font-size="11" font-weight="400">CPU</text>
+<text x="521" y="351" font-size="11" font-weight="400">420 W</text>
+<text x="540" y="632" font-size="11" font-weight="400">OFF</text>
+<text x="474" y="571" font-size="11" font-weight="400">67</text>
+<text x="539" y="594" font-size="11" font-weight="400">69</text>
+<ellipse cx="370" cy="114.5" rx="105" ry="60.5" fill="#ffbab2" stroke="#433145" stroke-width="4"/>
+<text x="370" y="123" font-size="30" font-weight="700">×</text>
+<text x="370" y="154" font-size="11" font-weight="400">CLICK TO CLOSE</text>
+<text x="370" y="951" font-size="14" font-weight="700">GENERATED V10 INTERFACE PREVIEW — EXAMPLE READINGS</text>
+</g></svg>
