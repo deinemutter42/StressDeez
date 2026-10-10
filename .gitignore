@@ -1,0 +1,8 @@
+bin/
+obj/
+dist/
+.build-tools/
+build.log
+.vs/
+*.user
+*.suo
