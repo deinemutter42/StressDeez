@@ -9,6 +9,17 @@ AI authorship does not imply that the application has been independently audited
 A portable, single-file Windows 11 x64 application using NVIDIA OpenCL compute,
 multithreaded CPU AVX/FMA FFT workloads, and live NVIDIA NVML / optional CPU sensor telemetry.
 
+## What it does
+
+StressDeez deliberately loads your NVIDIA GPU and CPU to generate heat and exercise the PC under sustained load. Move the slider to choose a target between **0 and 420 watts**; the app changes the compute workload to try to reach that target.
+
+- **GPU first:** it runs OpenCL calculations on the NVIDIA GPU. When the GPU reaches its measured capacity, it adds multithreaded AVX/FMA FFT calculations on the CPU, provided combined power readings are available.
+- **Live feedback:** it reads GPU board power through NVIDIA NVML and CPU package power through LibreHardwareMonitor, with an optional HWiNFO shared-memory fallback. It adjusts the workload using those readings and displays power and temperatures.
+- **GPU-only mode:** pin the slider to the moving CPU marker to request full GPU load while keeping the app's CPU FFT workers off.
+- **Stop:** set the slider to 0, press Esc, or close the window to stop its compute workloads.
+
+For example, selecting **300 W** asks the controller to approach 300 W of measured GPU board plus CPU package power. The amount each component contributes depends on the hardware and available sensors. This reading excludes the rest of the PC and PSU losses; it is not wall-outlet power. It can help observe cooling and sustained-load behavior, but it does not produce a benchmark score or certify that a machine is stable. The FFT workload is implemented in this app; it does not launch Prime95.
+
 ## Build
 
 Double-click **BUILD.bat**. It reuses an existing .NET 8+ SDK or downloads .NET 8 to a shared user folder. Once built, copy **dist/StressDeez.exe** anywhere on the same PC; it needs no .NET runtime installation. Your NVIDIA graphics driver must provide OpenCL and NVML. The build uses NuGet for `LibreHardwareMonitorLib` on first restore. The compiler output is saved to `build.log`.
